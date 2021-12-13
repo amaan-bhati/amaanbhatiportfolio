@@ -15,6 +15,34 @@
             width: 1500px;
             height: 400px;
         }
+        *,
+        *::before,
+        *::after{ 
+            box-sizing:border-box ;
+
+        }
+        :root {
+            --fw-reg:300;
+            --fw-bold:900;
+
+            --clr-light:#fff;
+            --clr-dark:#303030;
+            --clr-accent:#16e0bd;
+            
+            --fs-h1: 4.5;
+            --fs-h2:3.75rem;
+            --fs-h3:1.5rem
+            --fs-body:1.125rem;
+        }
+        
+/*general styles*/
+body{
+    background:var(--clr-accent);
+}
+
+
+        }
+         
     </style>
         
 
@@ -22,6 +50,7 @@
         <meta charset="viewport" content="width=device-width,inital-scale=1.0">
         <title>AmaanBhati Portfolio Website</title>
         <link rel="stylesheet" href="assets/css/styles.css" />
+        <link href="">
 
         <!-- Favicons -->
         <link
@@ -62,7 +91,7 @@
         <header>
             <section class="section3">
             <div class = "logo">
-                <img src="" alt = "">
+                <img height="150px" width="200px" src="https://yt3.ggpht.com/cpVtFwaLPWVVHQQG-Ft_mS4z61KuWQsgkx9tx7rkKOQdWO1Regdqx_1sq7FuiKeKqe2Jnag5Jg=s900-c-k-c0x00ffffff-no-rj" alt = "">
             </div>
             <button class ="nav-toggle" aria-label="toggle navigation">
                 <span class = "hamburger">
@@ -79,21 +108,21 @@
             </nav>
             </section>
         </header>
+        <!--Introduction-->
         <section class = "intro" id = "home">
             <h1 class = "secton--title secton__title--intro">
-            hi,i am <strong>AmaanBhati</strong>
+            Hi , I am <strong>AmaanBhati</strong>
             </h1>
             <p class="secton--subtitle secton__subtitletitle--intro">
-                front-end dev
+             Front-end dev
             </p>
-            <img src="img" alt="a picture of Amaan Bhati">
+            <img src="dev_js/portfolio_image.jpg" alt="a picture of Amaan Bhati">
             
         </section>
         <!--my services-->
         <section class = "my-services" id = "services">
             <h2 class = "secton--title secton__title--services">
-            What do I know
-                </h1>
+            What do I know</h2>
                 <div class = "services">
                 <div class="service">
                 <h3>Advanced HTML</h3>
@@ -113,8 +142,9 @@
             </div><!--/service-->
             <div class="service">
                 <h3>JavaScript and basics of React</h3>
-                <p>I started learning JavaScriptlast month and currently im learning React and its basic comcepts.
+                <p>FULL STACK SOFTWARE ENGINEER(Reactjs)</p>
                    <p> Ive learned all the basic JavaScript required to build a website and un smoothly.</p>
+                   <p>Also learned all the reactjs concepts that are enough to modify a website</p>
 
 
                 </p>
