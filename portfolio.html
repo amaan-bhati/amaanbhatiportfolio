@@ -2,19 +2,7 @@
 <html>
     <head>
         <style type="text/css">
-        body{
-            background-color:wheat;
-        }
-        .mysection {
-            background-color:burlywood;
-            width: 1500px;
-            height: 400px;
-        }
-        .section3 {
-            background-color: rgb(224, 145, 145);
-            width: 1500px;
-            height: 400px;
-        }
+       
         *,
         *::before,
         *::after{ 
@@ -73,6 +61,36 @@ img{
 
 }
 strong {font-weight: var(--fw-bold);}
+
+:focus{
+    outline:3px solid var(--clr-accent);
+    outline-offset: 3px;
+
+
+}
+
+/*button*/
+
+
+.btn{
+    display: inline-block;
+    padding: .5em 2.5em;
+    background:var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition:transform 200ms ease-in-out;
+
+
+
+}
+.btn:hover{
+    transform: scale(1.1);
+}
 
 
 /*typography*/
@@ -169,7 +187,59 @@ nav{ display : none; }
 
 
 }
+.my-services{
+    background-color: var(--clr-dark);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuBRwHOjV-bpf1gvHXnHPRkgMIAWJBLjsVUA&usqp=CAU) height: 540px; width: 1600px;;
 
+    background-size: :cover;
+    background-blend-mode:multiply;
+    color:var(--clr-light);
+    text-align:center;
+
+
+}
+
+.section__title--services{
+    color:var(--clr-accent);
+    position: relative;
+}
+
+.section__title--services::after{
+    content:"";
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin:0.5em auto 1em;
+  
+    background: var(--clr-light);
+    opacity: 0.25;
+
+}
+.services{
+    margin: bottom 4em;
+
+}
+.service{
+    max-width: 500px;
+    margin:0 auto;
+
+}
+
+@media (min-width:800px){
+    .services{
+        display:flex;
+        max: width 1000px;
+        margin-left: auto;
+
+
+    }
+
+    .services + .services {
+        margin-left: 2em;
+
+
+    }
+}
 
         }
          
@@ -250,7 +320,7 @@ nav{ display : none; }
             
         </section>
 
-        /*myservices*/
+        <!--my services-->
 
         <section class = "my-services" id = "services">
             <h2 class = "secton--title secton__title--services">
