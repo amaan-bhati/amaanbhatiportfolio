@@ -299,12 +299,35 @@ nav{ display : none; }
     background-color: var(--clr-dark);
      color: var(--clr-light);
      text-align: center;
+}
+ 
 
+
+.section__subtitle--work {
+    color:var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
 }
 .portfolio{
     display: grid;
-    grid-template-columns: repeat (auto-fit;minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit),minmax(300px,1fr));
     
+}
+
+.portfolio__item{
+    background: var(--clr-accent); 
+    overflow: 0.5;
+
+}
+
+
+
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform:scale(1,2);
+    opacity:.5;
+
 }
 
         }
@@ -446,7 +469,7 @@ nav{ display : none; }
                 <!--My work-->
                 <section class = "my-work" id = "work">
                 <h2 class="section__title">My work</h2>
-                <p class = "section__subtitle"></p>
+                <p class = "section__subtitle">A selection of my range of work</p>
                 <div class = "Portfolio">
                  <!--portfolio item 01-->
                     <a href = "#" class="portfolio__item">
