@@ -320,7 +320,16 @@ nav{ display : none; }
 
 }
 
-
+.portfolio__img{
+    transition: 
+    transform 750 ms cubic-bezier(.5,0,.5,1);
+    opacity: 250ms linear;
+}
+.portfolio__item:focus{
+    position: relative;
+    z-index:2;
+    
+}
 
 
 .portfolio__img:hover,
@@ -329,6 +338,26 @@ nav{ display : none; }
     opacity:.5;
 
 }
+/*footer*/
+footer{
+
+
+background : #111;
+color:var(--clr-accent);
+text-align:center;
+padding:2.5em 0;
+
+}
+
+.footer a {color:inherit}
+
+.footer__link:hover,
+.social-list__link:hover{
+    opacity:.7;
+    
+}
+
+
 
         }
          
