@@ -209,6 +209,15 @@ header{
     padding:.25em;
     background:transparent;
     border:0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top:1em;
+    z-index:1000;
+}
+
+.nav-open{
+    background:red;
     
 }
 .hamburger{
@@ -619,10 +628,7 @@ font-size: var(--fs-h3);
             </header>
             <div class = "about-me__body">
                 <h3>designer and developer based in Bokaro</h3>
-                <p>vuu revk gcecibc rliuu2g   ckhhe cjhhchje
-                    weke kjvee fvjvef ecccjh ecwhh evkg dev maan bhati wants to be a great guy and is currently studying in kiit bhubananeswar
-                </p>
-                <p>gwluhgi egwv echewh rgkigwr wrgiygwf wqruyygwqeef wqyygwe qwej </p>
+                
                 </div>
                 <img src="" alt = "" class="about-me__img">
                 </section>
@@ -716,6 +722,17 @@ font-size: var(--fs-h3);
             </section>
             
         </section>
+
+        <script>
+            comst navToggle+document.querySelector('.nav-toggle');
+
+            navToggle.addEventListener('click',() => {
+                document.body.classList.toggle('nav-open');
+
+            });
+
+        </script>
+
             
         
     </body>
