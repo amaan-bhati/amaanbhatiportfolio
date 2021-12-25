@@ -1,779 +1,248 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Amaan Bhati portfolio website</title>
-        <style type="text/css">
-       
-        *,
-        *::before,
-        *::after{ 
-            box-sizing:border-box ;
 
-        }
-        :root {
-            --ff-primary:"Source Sans Pro" , sans-serif;
-            --ff-secondary: "Source Code Pro" , monospace;
-
-            --fw-reg:300;
-            --fw-bold:900;
-
-            --clr-light:#fff;
-            --clr-dark:#303030;
-            --clr-accent:#16e0bd;
-            
-            --fs-h1: 3rem;
-            --fs-h2:2.25rem;
-            --fs-h3:1.25rem
-            --fs-body:1rem;
-            --bs:0.25em 0.25em 0.75em rgba(0,0,0,.25);
-            0.125em 0.125em 0.25em rgba(0,0,0,.15);
-
-
-
-
-        }
-        @media(min-width:800px) {
-            :root {
-                --fs-h1: 4.5rem;
-                --fs-h2:3.75rem;
-                --fs-h3:1.5rem;
-                --fs-body:1.125rem;
-
-            }
-        }
-        
-/*general styles*/
-body{
-    background:var(--clr-light);
-    color:var(--clr-dark);
-    margin: 0;
-    font-family: var(--ff-primary);
-    font-size: var(--fs-body);
-    line-height: 1.6;
-}
-
-section{
-    padding: 5em 2em;
-}
-img{
-    display: block;
-    max-width: 100%;
-
-
-}
-strong {font-weight: var(--fw-bold);}
-
-:focus{
-    outline:3px solid var(--clr-accent);
-    outline-offset: 3px;
-
-
-}
-
-/*button*/
-
-
-.btn{
-    display: inline-block;
-    padding: .5em 2.5em;
-    background:var(--clr-accent);
-    color: var(--clr-dark);
-    text-decoration: none;
-    cursor: pointer;
-    font-size: .8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: var(--fw-bold);
-    transition:transform 200ms ease-in-out;
-
-
-
-}
-.btn:hover{
-    transform: scale(1.1);
-}
-
-
-/*typography*/
-h1,
-h2,
-h3{
-    line-height: 1,1;
-    margin: 0;
-}
-h1{font-size:var(--fs-h1)}
-h2{font-size:var(--fs-h2)}
-h3{font-size:var(--fs-h3)}
-
-
-/*styling the titles and subtitles*/
-
-.section__title{
-    margin-bottom: .25em;
-
-}
-
-.section__title--intro{
-    font-weight:var(--fw-reg) ;
-}
-
-.section__title--intro strong {
-    display: block;
-}
-
-
-.section__subtitle{
-    margin: 0;
-    font-size: var(--fs-h3);
-     
-}
-
-
-
-.section__subtitle--intro,
-.section__subtitle--about {
-    background:var(--clr-accent);
-    padding: .25em 1em;
-    font-family: var(--ff-secondary);
-    margin-bottom: 1em;  /*this will give a space beetween the heading and the image above the image*/
-
-
-}
-/*header*/
-
-header{
-    display:flex;
-    justify-content: space-between;
-    padding: 1em;
-}
-
-.logo{
-    max-width: 100px;
-}
-
-
-.nav {
-    position: fixed;
-    background: var(--clr-dark);
-    color:var(--clr-light);
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index: 100;
-
-    transform: translateX(100%);
-    transition: transform 250ms cubic-bezier(.5,0,.5,1);
-
-
-
-    }
-.nav__list {
-    list-style: none;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items:center ;
-    margin:0;
-    padding: 0;
-
-
-
-    
-    }
-.nav__link {
-    color:inherit;
-    font-weight: var(--fw-bold);
-    font-size: var(--fw-bold);
-    font-size: var(--fs-h2);
-    text-decoration: none;
-
-    }
-
-.nav__link{
-    color: inherit;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h2);
-    text-decoration: none;
-
-}
-
-
-.nav__link:hover {
-    color:var(--clr-accent);
-
-
-}
-
-.nav-toggle{
-    padding:.25em;
-    background:transparent;
-    border:0;
-    cursor: pointer;
-    position: absolute;
-    right: 1em;
-    top:1em;
-    z-index:1000;
-}
-
-.nav-open{
-    background:red;
-    
-}
-.hamburger{
-    
-    display: block;
-    position: relative;
-}
-
-.hamburger
-.hamburger::before,
-.hamburger::after{
-
-    background: var(--clr-dark);
-    width: 2em;
-    height: 3px;
-    border-radius: 1em;
-    transition: transform 250ms ease-in-out;
-}
-.hamburger
-.hamburger::before,
-.hamburger::after{
-    content:'';
-    position: :absolute;
-    left:0;
-    right: 0;
-    
-
-
-}
-
-.hamburger::before{top:6px;}
-.hamburger::after{bottom:6px;}
-
-
-}
-/*Intro Section*/
-
-.intro{
-    postion:relative;
-}
-
-.intro__img{
-    box-shadow: var(--bs);
-}
-.section__subtitle--intro{
-    display: inline-block;
-}
-
-@media (min-width: 600px;){
-
-
-.intro {
-    display:grid;
-    width:min-content;
-    margin: 0 auto;
-    grid-column-gap:1em;
-    grid-template-areas:none"
-        "img title"
-        "img subtitle";
-    grid-template-columns:min-content max-content;
-
-    }
-
-.intro__img
-    grid-area: img;
-    min-width:  250px;
-    position: relative;
-    z-index: 2;
-    
-}
-
-.section__subtitle--intro{
-    align-self: start;
-    grid-column: -1/1;
-    grid-row:2;
-    text-align: right;
-    position: relative;
-    left: -11.5em;
-    width:calc(100%  + 1.5em);
-
-
-
-
-}
-.my-services{
-    background-color: var(--clr-dark);
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuBRwHOjV-bpf1gvHXnHPRkgMIAWJBLjsVUA&usqp=CAU) height: 540px; width: 1600px;;
-
-    background-size: :cover;
-    background-blend-mode:multiply;
-    color:var(--clr-light);
-    text-align:center;
-
-
-}
-
-.section__title--services{
-    color:var(--clr-accent);
-    position: relative;
-}
-
-.section__title--services::after{
-    content:"";
-    display: block;
-    width: 3em;
-    height: 1px;
-    margin:0.5em auto 1em;
-  
-    background: var(--clr-light);
-    opacity: 0.25;
-
-}
-.services{
-    margin: bottom 4em;
-
-}
-.service{
-    max-width: 500px;
-    margin:0 auto;
-
-}
-
-@media (min-width:800px){
-    .services{
-        display:flex;
-        max: width 1000px;
-        margin-left: auto;
-
-
-    }
-
-    .services + .services {
-        margin-left: 2em;
-
-
-    }
-}
-
-.about-me{
-    max-width: 1000px;
-    margin:0 auto;
-
-}
-.about-me__img {
-    box-shadow: var(--bs);
-}
-@media(min-width:600px){
-    .about-me{
-        display: grid;
-        grid-template-columns: 1fr 200px;
-        grid-template-areas: 
-        "title img"
-        "subtitle img"
-        "text img";
-        grid-column-gap:2em ;
-        
-
-    }
-    .section__title_about{
-        grid-area: title;
-
-    }
-    .section__subtitle--about{
-    grid-column: 1/-1;
-    grid-row:2;
-    position: relative;
-    left:-2em;
-    width:calc(100% + 2em);
-    padding-left: 1em ;
-    padding-right: calc(200px + 4em) ;
-}
-
-
-    .about-me__img{
-        grid-area: img;
-        position: relative;
-        z-index: 2;
-
-    }
-
-    .section__subtitle--about{
-        grid-column: 1;
-    }
-
-
-    .about-me__img{
-        grid-row: 1/-1;
-        grid-column: 2/;
-    }
-
-}
-/*My work*/
-.my-work{
-    background-color: var(--clr-dark);
-     color: var(--clr-light);
-     text-align: center;
-}
- 
-
-
-.section__subtitle--work {
-    color:var(--clr-accent);
-    font-weight: var(--fw-bold);
-    margin-bottom: 2em;
-}
-.portfolio{
-    display: grid;
-    grid-template-columns: repeat(auto-fit),minmax(300px,1fr));
-    
-}
-
-.portfolio__item{
-    background: var(--clr-accent); 
-    overflow: 0.5;
-
-}
-
-.portfolio__img{
-    transition: 
-    transform 750 ms cubic-bezier(.5,0,.5,1);
-    opacity: 250ms linear;
-}
-.portfolio__item:focus{
-    position: relative;
-    z-index:2;
-    
-}
-
-
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-    transform:scale(1,2);
-    opacity:.5;
-
-}
-/*footer*/
-
-.footer{
-
-
-background : #111;
-color:var(--clr-accent);
-text-align:center;
-padding:2.5em 0;
-font-size: var(--fs-h3);
-
-}
-
-.footer a {
-    color:inherit;
-    text-decoration: none;
-
-}
-.footer__link{
-
-    font-weight: var(--fw-bold);
-}
-
-.footer__link:hover,
-.social-list__link:hover{
-    opacity:.7;
-    
-}
-.footer__link:hover{
-    text-decoration: underline;
-
-}
-.social-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin:2em 0 0;
-    padding: 0;
-}
-.social-list__item {
-    margin:0 .5em;
-
-}
-.social-list__link {
-    padding:.5em;
-
-}
-
-        }
-         
-    </style>
-        
-
-        <meta charset="UTF-8">
-        <meta charset="viewport" content="width=device-width,inital-scale=1.0">
-        <title>AmaanBhati Portfolio Website</title>
-        <link rel="stylesheet" href="assets/css/styles.css" />
-        <link href="">
-
-        <!-- Favicons -->
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="assets/icons/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="assets/icons/favicon-32x32.png"
-        />
-    
-        <!-- Animate CSS CDN -->
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-        <link rel="stylesheet" href="css/style.css/" >
-
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <img src = "">
-                
-            </div>
-            <button class = "nav-toggle" aria-label="toggle navigation">
-                <span class = "hamburger">
-
-                </span>
-            </button>
-            <nav class="nav">
-                <ul class = "nav--list">
-
-                </ul>
-
-            </nav>
-        </header>
-
-
-        <section class="mysection">
-            
-        
-        <p style="font-size: 20px;text-align: center;"style="font-size:20px;background-color: burlywood; text-align: center; ">Heyy There</p>
-
-        <p style="font-size: 40px;text-align: center;"style="font-size: 20px;background-color: burlywood; text-align: center;">I am Amaan</p>
-
-        <p style="font-size: 20px;text-align: center;"style="font-size:20px;background-color: burlywood; text-align: center;">A web-developer and a CSE undergraduate</p>
-
-        <p style= "font-size: 20px;text-align: center;"style="font-size:20px;background-color: burlywood; text-align: center; ">FRONTEND DEVELOPER who likes to craft solid and scalable websites with great user experiences.</p>
-
-
-
-        </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Amaan Bhati portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta charset="viewport" content="width=device-width,inital-scale=1.0">
+    <title>AmaanBhati Portfolio Website</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+    <!-- Animate CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css/">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="">
+
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger">
+
+            </span>
+        </button>
+        <nav class="nav">
+            <ul class="nav--list"></ul>
+        </nav>
     </header>
-        <header>
-            <section class="section3">
-            <div class = "logo">
-                <img height="150px" width="200px" src="https://yt3.ggpht.com/cpVtFwaLPWVVHQQG-Ft_mS4z61KuWQsgkx9tx7rkKOQdWO1Regdqx_1sq7FuiKeKqe2Jnag5Jg=s900-c-k-c0x00ffffff-no-rj" alt = "">
-            </div>
-            <button class ="nav-toggle" aria-label="toggle navigation">
-                <span class = "hamburger">
 
-                </span>
+
+    <section class="mysection">
+        <p style="font-size: 20px;text-align: center;"
+            style="font-size:20px;background-color: burlywood; text-align: center; ">Heyy There</p>
+
+        <p style="font-size: 40px;text-align: center;"
+            style="font-size: 20px;background-color: burlywood; text-align: center;">I am Amaan</p>
+
+        <p style="font-size: 20px;text-align: center;"
+            style="font-size:20px;background-color: burlywood; text-align: center;">A web-developer and a CSE
+            undergraduate</p>
+
+        <p style="font-size: 20px;text-align: center;"
+            style="font-size:20px;background-color: burlywood; text-align: center; ">FRONTEND DEVELOPER who likes to
+            craft solid and scalable websites with great user experiences.</p>
+    </section>
+
+    <header>
+        <section class="section3">
+            <div class="logo">
+                <img height="150px" width="200px"
+                    src="https://yt3.ggpht.com/cpVtFwaLPWVVHQQG-Ft_mS4z61KuWQsgkx9tx7rkKOQdWO1Regdqx_1sq7FuiKeKqe2Jnag5Jg=s900-c-k-c0x00ffffff-no-rj"
+                    alt="">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
             </button>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class = "nav__item"><a href="#home" class="nav__link">  Home</a></li>
-                    <li class = "nav__item"><a href="#services" class="nav__link">  My Services</a></li>
-                    <li class = "nav__item"><a href="#about" class="nav__link">  About me</a></li>
-                    <li class = "nav__item"><a href="#work" class="nav__link">  My Work</a></li>
-
+                    <li class="nav__item"><a href="#home" class="nav__link"> Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link"> My Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link"> About me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link"> My Work</a></li>
                 </ul>
             </nav>
-        </header>
-
-
-        <!--Introduction-->
-        <section class = "intro" id = "home">
-
-            <h1 class = "secton--title secton__title--intro">
-                Hi , I am <strong>AmaanBhati</strong>
-
-            </h1>
-
-            <p class="secton--subtitle secton__subtitletitle--intro">
-             Front-end dev</p>
-
-            <img src="dev_js/portfolio_image.jpg"  class="intro__img">
-            
         </section>
+    </header>
 
-        <!--my services-->
 
-        <section class = "my-services" id = "services">
-            <h2 class = "secton--title secton__title--services">
+    <!--Introduction-->
+    <section class="intro" id="home">
+
+        <h1 class="secton--title secton__title--intro">
+            Hi , I am <strong>AmaanBhati</strong>
+        </h1>
+
+        <p class="secton--subtitle section__subtitle--intro">
+            Front-end dev</p>
+
+        <img src="dev_js/portfolio_image.jpg" class="intro__img">
+
+    </section>
+
+    <!--my services-->
+
+    <section class="my-services" id="services">
+        <h2 class="secton--title secton__title--services">
             What do I know</h2>
 
-                <div class = "services">
-                <div class="service">
-                <h3>Advanced HTML</h3>
-                <p>Ive been learning and practicing HTML since when I was in 6th standard and by now I have a promising grip on advanced HTML concepts.
-                <p>  I build basic to advanced HTML websites in order to practice and sharpen my skills.</p>
-
-                    </p>
-                </div> <!--/service-->
-            
-            
+        <div class="services">
             <div class="service">
-                <h3>CSS designs</h3>
-                <p>I'm currently working on CSS in order to make all the websites interactive as well as attractive.
-                  <p>  I started learning CSS a few months ago and i know all the basic CSS concepts required to make user friendly and attractive websites.</p>
+                <h3>Basic and Advanced HTML</h3>
+                <p>Ive been learning and practicing HTML since 6th standard and by now I have a promising grip on basic
+                    and advanced HTML concepts.
+                <p> I build basic to advanced HTML websites in order to practice and sharpen my skills.</p>
 
                 </p>
-            </div><!--/service-->
+            </div>
+            <!--/service-->
 
+            <div class="service">
+                <h3>CSS designs</h3>
+                <p> I started learning CSS a few months ago and i know all the basic CSS concepts required to make user
+                    friendly and attractive websites.</p>
+                <p>I'm currently working on CSS in order to make all the websites interactive as well as attractive.
+
+
+                </p>
+            </div>
+            <!--/service-->
 
             <div class="service">
                 <h3>JavaScript and basics of React</h3>
                 <p>FULL STACK SOFTWARE ENGINEER(Reactjs)</p>
-                   <p> Ive learned all the basic JavaScript required to build a website and un smoothly.</p>
-                   <p>Also learned all the reactjs concepts that are enough to modify a website</p>
+                <p> Ive learned all the basic JavaScript required to build a website and run smoothly.</p>
+                <p>I Also learned all the reactjs concepts that are enough to modify a website</p>
 
 
                 </p>
-            </div><!--/service-->
-
+            </div>
+            <!--/service-->
 
             <div class="service">
                 <h3>A learner of problem solving and time management</h3>
-                <p>Working on various methods to deal with time management and problem solving in order to sharpen my working skills 
-                   <p> </p>
-            </div><!--service-->
+                <p>Working on various methods to deal with time management and problem solving in order to sharpen my
+                    working skills
+                <p> </p>
+            </div>
+            <!--service-->
+            <a href="#work" class="btn">My Work</a>
 
-
-            <a href = "#work" class="btn">My Work</a>
-
-
-
-
-
-            <!--about me-->
-            <section class = "about me" id ="about">
+            <!--About me-->
+            <section class="about me" id="about">
                 <header>
-                <h2 class = "secton--title secton__title--about">Who i am</h2>
-                <p class = "secton__subtitle secton__subtitle--about"></p>
-            </header>
-            <div class = "about-me__body">
-                <h3>designer and developer based in Bokaro</h3>
-                
+                    <h2 class="secton--title secton__title--about">Who I am</h2>
+                    <p class="secton__subtitle secton__subtitle--about"></p>
+                </header>
+                <div class="about-me__body">
+                    <h3>designer and developer based in Bokaro</h3>
                 </div>
-
-                
                 <!--image-->
-                <img src="" alt = "" class="about-me__img">
-                </section>
+                <img src="" alt="" class="about-me__img">
+            </section>
 
-
-                <!--My work-->
-                <section class = "my-work" id = "work">
+            <!--My work-->
+            <section class="my-work" id="work">
                 <h2 class="section__title">My work</h2>
-                <p class = "section__subtitle">A selection of my range of work</p>
-                <div class = "Portfolio">
-                 <!--portfolio item 01-->
-                    <a href = "#" class="portfolio__item">
-                        <img src="https://www.onlinecoursereport.com/wp-content/uploads/2020/07/shutterstock_394793860-1024x784.jpg" alt="">
-                        
-
-                    </a>
-                <!--portfolio item 02-->
-                    <a href = "#" class="portfolio__item">
-                         <img src="https://www.syncfusion.com/blogs/wp-content/uploads/2020/07/Top-6-Front-End-Web-Development-Tools-to-Increase-Your-Productivity-in-2020-1.jpg" alt="">
-
-                    
-                            </a>
-                <!--portfolio item 03-->
-                    <a href = "#" class="portfolio__item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNEjnHFMDebxuJsptg30Et-CRlp55HsDKdGA&usqp=CAU" alt="">
-
-                
-                                </a>
-                 <!--portfolio item 04-->
-                    <a href = "#" class="portfolio__item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200203200336/13-Things-You-Should-Know-Before-You-Enter-In-Web-Development.png" alt="">
+                <p class="section__subtitle">A selection of my range of work</p>
+                <div class="Portfolio">
+                    <!--portfolio item 01-->
+                    <a href="#" class="portfolio__item">
+                        <img src="https://www.onlinecoursereport.com/wp-content/uploads/2020/07/shutterstock_394793860-1024x784.jpg"
+                            alt="">
 
 
                     </a>
-                <!--portfolio item 05-->
-                    <a href = "#" class="portfolio__item">
-                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYiBKewcO5Jl56hYm4aDJo08iRRG2dsBJW3jFNDrjSNEZdUWsVw_z_G_l66-PyPaeKuIo&usqp=CAU" alt="">
+                    <!--portfolio item 02-->
+                    <a href="#" class="portfolio__item">
+                        <img src="https://www.syncfusion.com/blogs/wp-content/uploads/2020/07/Top-6-Front-End-Web-Development-Tools-to-Increase-Your-Productivity-in-2020-1.jpg"
+                            alt="">
 
-                    
-                            </a>
-                <!--portfolio item 06-->
-                    <a href = "#" class="portfolio__item">
-                        <img src="https://www.spinutech.com/webres/Image/web-design-development/articles/Web%20Dev-Blog.png" alt="">
 
-                        </a>
+                    </a>
+                    <!--portfolio item 03-->
+                    <a href="#" class="portfolio__item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNEjnHFMDebxuJsptg30Et-CRlp55HsDKdGA&usqp=CAU"
+                            alt="">
 
-                  <!--portfolio item 07-->
-                    <a href = "#" class="portfolio__item">
+
+                    </a>
+                    <!--portfolio item 04-->
+                    <a href="#" class="portfolio__item">
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200203200336/13-Things-You-Should-Know-Before-You-Enter-In-Web-Development.png"
+                            alt="">
+
+
+                    </a>
+                    <!--portfolio item 05-->
+                    <a href="#" class="portfolio__item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYiBKewcO5Jl56hYm4aDJo08iRRG2dsBJW3jFNDrjSNEZdUWsVw_z_G_l66-PyPaeKuIo&usqp=CAU"
+                            alt="">
+
+
+                    </a>
+                    <!--portfolio item 06-->
+                    <a href="#" class="portfolio__item">
+                        <img src="https://www.spinutech.com/webres/Image/web-design-development/articles/Web%20Dev-Blog.png"
+                            alt="">
+
+                    </a>
+
+                    <!--portfolio item 07-->
+                    <a href="#" class="portfolio__item">
                         <img src="https://agreemtech.com/wp-content/uploads/2021/05/web-development.jpg" alt="">
 
 
                     </a>
 
-                <!--portfolio item 08-->
-                    <a href = "#" class="portfolio__item">
-                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJi-p9GgrCAU-Wnji7UVI9E4JCeEq76XOBEQzra56c1YCMeFDQT3-3H7W_omexlOBPKU4&usqp=CAU" alt="">
+                    <!--portfolio item 08-->
+                    <a href="#" class="portfolio__item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJi-p9GgrCAU-Wnji7UVI9E4JCeEq76XOBEQzra56c1YCMeFDQT3-3H7W_omexlOBPKU4&usqp=CAU"
+                            alt="">
 
-                    
-                            </a>
-                <!--portfolio item 09-->
-                    <a href = "#" class="portfolio__item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRafD8TI5rqcWPxJ1W9ZHfkyByz2zTvwKUhkWiVKOl-RNic3wILPWybq-P7gQhdfRDxmRc&usqp=CAU" alt="">
 
-                        </a>
-
-                <!--portfolio item 10-->
-                     <a href = "#" class="portfolio__item">
-                         <img src="https://binaryinformatics.com/wp-content/uploads/2019/04/Full-Stack-Development-Services-1.jpg" alt="">
-
-        
                     </a>
-                <!--footer-->
-                    <footer>
-                        <footer class="footer"
-                            <a href="mailto:amaanbhati49@gmail.com" class="footer-link">amaanbhati49@gmail.com</a>
-                            <ul class = "social-list__item">
-                                <li class="social-list__item"><a class="social-list__link"
-                                 href=""></a></li>
-                                
-                                <li class="social-list__item"><a class="social-list__link" 
-                                href=""></a></li>
-                                <li class="social-list__item"><a class="social-list__link" 
-                                href=""></a></li>
-                                <li class="social-list__item"><a class="social-list__link" 
-                                href=""></a></li>
-                                
+                    <!--portfolio item 09-->
+                    <a href="#" class="portfolio__item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRafD8TI5rqcWPxJ1W9ZHfkyByz2zTvwKUhkWiVKOl-RNic3wILPWybq-P7gQhdfRDxmRc&usqp=CAU"
+                            alt="">
 
+                    </a>
+
+                    <!--portfolio item 10-->
+                    <a href="#" class="portfolio__item">
+                        <img src="https://binaryinformatics.com/wp-content/uploads/2019/04/Full-Stack-Development-Services-1.jpg"
+                            alt="">
+                    </a>
+                    <!--footer-->
+                    <footer>
+                        <footer class="footer">
+                            <a href="mailto:amaanbhati49@gmail.com" class="footer-link">amaanbhati49@gmail.com</a>
+                            <ul class="social-list__item">
+                                <li class="social-list__item"><a class="social-list__link" href="">a</a></li>
+                                <li class="social-list__item"><a class="social-list__link" href="">b</a></li>
+                                <li class="social-list__item"><a class="social-list__link" href="">c</a></li>
+                                <li class="social-list__item"><a class="social-list__link" href="">d</a></li>
                             </ul>
-                        </footer>                                   
+                        </footer>
                 </div>
             </section>
-            
-        </section>
+    </section>
 
-        <script>
-            comst navToggle+document.querySelector('.nav-toggle');
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
 
-            navToggle.addEventListener('click',() => {
-                document.body.classList.toggle('nav-open');
+        navToggle.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+        });
+    </script>
 
-            });
+</body>
 
-        </script>
-
-            
-        
-    </body>
 </html>
