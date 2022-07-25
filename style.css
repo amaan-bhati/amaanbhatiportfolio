@@ -15,7 +15,7 @@
     
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #f8333c;
+    --clr-accent:  #c9c6cb;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -44,7 +44,7 @@
 
 
 body {
-    background: var(--clr-light);
+    background: #6a6666;
     color: var(--clr-dark);
     margin: 0;
     font-family: var(--ff-primary);
@@ -121,7 +121,7 @@ h3 { font-size: var(--fs-h3) }
 
 .section__subtitle--intro,
 .section__subtitle--about {
-    background: var(--clr-accent);
+    background:#fbf7ffa8;
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
@@ -395,7 +395,7 @@ header {
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
+    background: #303030;
     overflow: hidden;
 }
 
